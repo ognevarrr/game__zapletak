@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width"/>
+     <title>заплетак</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+     <script src="js/find.js"></script>
+     <script src="js/draw.js"></script>
+     <script src="js/ddraw.js"></script>
+     <script src="js/puzzle.js"></script>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+     <script type="text/javascript">
+              $(document).ready(function(){
+                // переходы из труб в разделы-игры
+                $(".items_blue").click(function() {
+                  $(".screen_4").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                });
+
+                $(".items_orange").click(function() {
+                  $(".screen_3").css("display", "block")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+
+                $(".colors").click(function() {
+                  $(".screen_4").css("display", "none")
+                  $(".screen_2").css("display", "block")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                });
+                $("#home").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                  $(".screen_5").css("display", "none")
+                });
+                $("#home_1").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                  $(".screen_5").css("display", "none")
+                });
+                $("#next_2").click(function() {
+                  $(".screen_4").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_5").css("display", "none")
+                });
+                $("#next_1").click(function() {
+                  $(".screen_3").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                  $(".screen_5").css("display", "none")
+                });
+              });
+        </script>
+  </head>
+  <body>
+    <div class="forrotate">
+      <img src="images/rotate.svg" class="rotate">
+    </div>
+    <section class="screen_1">
+      <div class="tubes">
+        <img src="images/tubes.svg" class="tubes">
+        <img src="images/items_blue.svg" class="items_blue">
+        <div class="items_orange">
+          <img src="images/items_orange.svg" class="itemz_orange">
+        </div>
+        <div class="colors_dark">
+          <div class="color1_dark"></div>
+          <div class="color2_dark"></div>
+          <div class="color3_dark"></div>
+          <div class="color4_dark"></div>
+        </div>
+        <div class="items_dark">
+          <img src="images/item1_dark.svg" class="item1_dark">
+          <img src="images/item2_dark.svg" class="item2_dark">
+          <img src="images/item3_dark.svg" class="item3_dark">
+          <img src="images/item4_dark.svg" class="item4_dark">
+        </div>
+        <div class="blue_final">
+          <img src="images/yellow_2.svg" class="yellow_2">
+          <img src="images/yellow_1.svg" class="yellow_1">
+          <img src="images/yellow_3.svg" class="yellow_3">
+        </div>
+        <div class="color__button">
+          <img src="images/color__button.svg" class="colors">
+        </div>
+        <div class="yellow_rect"></div>
+      </div>
+    </section>
+    <section class="screen_2">
+      <h1 contentEditable="true">Заплетак 1</h1>
+      <div id="c_blue"></div>
+      <div id="c_black"></div>
+      <div id="c_yellow"></div>
+      <div id="c_orange"></div>
+      <!-- заплетак 1 -->
+      <div class="zapl1"></div>
+      <div class="zapl1"></div>
+      <div class="zapl1"></div>
+      <div class="zapl1"></div>
+      <!-- заплетак 2 -->
+      <div class="zapl2"></div>
+      <div class="zapl2"></div>
+      <div class="zapl2"></div>
+      <div class="zapl2"></div>
+      <!-- заплетак 3 -->
+      <div class="zapl3"></div>
+      <div class="zapl3"></div>
+      <div class="zapl3"></div>
+      <div class="zapl3"></div>
+      <!-- кнопка домой -->
+      <div id="home"></div>
+      <div id="next_1"></div>
+      <canvas id="draw"></canvas>
+    </section>
+    <section class="screen_3">
+      <div class="lapki">
+        <div id="lapka_1"></div>
+        <div id="lapka_2"></div>
+        <div id="lapka_3"></div>
+        <div id="lapka_4"></div>
+        <div id="lapka_5"></div>
+        <div id="lapka_6"></div>
+        <div id="lapka_7"></div>
+        <div id="lapka_8"></div>
+      </div>
+      <div id="z_0"></div>
+      <div id="z_b"></div>
+      <div id="home_1"></div>
+      <div id="next_2"></div>
+    </section>
+    <section class="screen_4">
+        <div class="puzzle1"></div>
+        <div class="puzzle2"></div>
+        <div class="puzzle3"></div>
+        <div class="puzzle4"></div>
+        <div class="puzzle5"></div>
+        <div class="puzzle6"></div>
+        <div class="puzzle7"></div>
+        <div class="puzzle8"></div>
+        <div class="puzzle9"></div>
+        <div class="puzzle10"></div>
+        <div class="puzzle11"></div>
+        <div class="puzzle12"></div>
+        <div class="puzzle13"></div>
+        <div class="puzzle14"></div>
+        <div class="puzzle15"></div>
+        <div class="puzzle16"></div>
+        <div class="puzzle17"></div>
+        <div class="puzzle18"></div>
+        <div class="puzzle19"></div>
+        <div class="puzzle20"></div>
+        <div id="home"></div>
+    </section>
+</html>
