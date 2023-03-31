@@ -6,12 +6,11 @@
   --yellow:#FFF968;
   --background: #EEFFFF;
 }
-*{
-  cursor: url(../images/cursor_1.svg);
+* {
+  cursor: none;
 }
 /* МИНИ-ИГРЫ */
 .screen_1 {
-  cursor: url(../images/cursor_1.svg);
   display: block;
 }
 
@@ -37,7 +36,6 @@
 html {
   width: 100vw;
   height: 100vh;
-  cursor: url(../images/cursor_1.svg);
 }
 body {
   overflow-x: hidden;
@@ -46,15 +44,21 @@ body {
   height:100vh;
   font-family: "Forma DJR";
   background-color: var(--background);
-  cursor: url(../images/cursor_1.svg);
 }
 section{
   position: absolute;
   width: 100vw;
   height:100vh;
 }
-cursor{
-  width: 16.806vw;
+.cursor{
+  opacity: 0%;
+  z-index: 10000;
+  pointer-events: none;
+  position: absolute;
+  background-image:url(../images/cursor_1.svg);
+  background-size: cover;
+  width: 6.1vw;
+  height: 7vw;
 }
 .tubes{
   position: absolute;
@@ -62,14 +66,12 @@ cursor{
   height: 56vw;
 }
 .items_blue{
-  cursor: move;
   position: absolute;
   width: 23.5vw;
   margin-left: 7vw;
   margin-top: 8.7vw;
 }
 .itemz_orange{
-  cursor: url(../images/cursor_1.svg), auto;
   position: absolute;
   width: 18.615vw;
   height: 57.192vw;
@@ -244,14 +246,11 @@ cursor{
   overflow: hidden;
 }
 #canvas{
-  width: 100vw;
-  height: 60vw;
+  width: 100%;
+  height: 100%;
   display: block;
   background: url('../images/y_background.png');
   background-size: cover;
-}
-.drawBack {
-  position: absolute;
 }
 h1{
   position: absolute;
@@ -260,9 +259,9 @@ h1{
   font-weight: 500;
   font-size: 4.861vw;
   letter-spacing: 0.04em;
-  color: var(--yellow);
+  color: var(--orange);
   margin-top: 4.728vw;
-  margin-left: 21vw;
+  margin-left: 14vw;
 }
 .colorButton{
   width: 4.333vw;

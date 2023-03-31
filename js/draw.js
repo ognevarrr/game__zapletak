@@ -27,12 +27,10 @@ $(document).ready(function(){
 	});
 });
 
-
-const canvas = document.querySelector('canvas')
-ctx = canvas.getContext("2d");
-
-const drawing = (e) => {
-  ctx.lineTo( e.offsetX, e.offsetY);
-  ctx.stroke();
-}
-canvas.addEventListener("mousemove", drawing);
+$(document).mousemove(function(e){
+  $(".cursor").css({
+    left: e.clientX,
+    top: e.clientY,
+    opacity: "100%",
+  })
+});

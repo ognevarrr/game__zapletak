@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width"/>
+     <title>заплетак</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+     <script src="js/draww.js"></script>
+
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+     <script type="text/javascript">
+              $(document).ready(function(){
+                // переходы из труб в разделы-игры
+                $(".items_blue").click(function() {
+                  $(".screen_4").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                });
+
+                $(".items_orange").click(function() {
+                  $(".screen_3").css("display", "block")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+
+                $(".colors").click(function() {
+                  $(".screen_4").css("display", "none")
+                  $(".screen_2").css("display", "block")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                });
+                $("#home").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+                $("#home_1").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+                $("#home_2").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+                $("#next_2").click(function() {
+                  $(".screen_4").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                });
+                $("#next_1").click(function() {
+                  $(".screen_3").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_1").css("display", "none")
+                  $(".screen_4").css("display", "none")
+                });
+              });
+        </script>
+  </head>
+  <body>
+<!-- кнопка домой -->
+   <canvas id="canvas"></canvas>
+  </body>

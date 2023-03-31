@@ -10,11 +10,12 @@
      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
      <script src="js/find.js"></script>
      <script src="js/draw.js"></script>
-     <script src="js/ddraw.js"></script>
+     <script src="js/draww.js" defer></script>
      <script src="js/puzzle.js"></script>
      <link rel="stylesheet" href="css/style.css">
      <link rel="icon" type="image/x-icon" href="images/favicon.png" />
      <script type="text/javascript">
+
               $(document).ready(function(){
                 // переходы из труб в разделы-игры
                 $(".items_blue").click(function() {
@@ -71,7 +72,7 @@
         </script>
   </head>
   <body>
-    <cursor></cursor>
+    <div class="cursor"></div>
     <div class="forrotate">
       <img src="images/rotate.svg" class="rotate">
     </div>
@@ -107,11 +108,11 @@
     </section>
     <section class="screen_2">
       <h1 contentEditable="true">Заплетак 1</h1>
+      <canvas id="canvas"></canvas>
       <div class="colorButton c_blue"></div>
       <div class="colorButton c_black"></div>
       <div class="colorButton c_yellow"></div>
       <div class="colorButton c_orange"></div>
-    </div>
       <!-- заплетак 1 -->
       <div class="zapl1"></div>
       <div class="zapl1"></div>
@@ -128,7 +129,7 @@
       <div class="zapl3"></div>
       <div class="zapl3"></div>
       <!-- кнопка домой -->
-      <canvas id="canvas"></canvas>
+
       <div id="home"></div>
       <div id="next_1"></div>
 
@@ -150,6 +151,7 @@
       <div id="next_2"></div>
     </section>
     <section class="screen_4">
+      <div class="puzzle">
         <div class="puzzle1"></div>
         <div class="puzzle2"></div>
         <div class="puzzle3"></div>
@@ -170,6 +172,8 @@
         <div class="puzzle18"></div>
         <div class="puzzle19"></div>
         <div class="puzzle20"></div>
+      </div>
         <div id="home_2"></div>
     </section>
+  </body>
 </html>
