@@ -42,33 +42,36 @@
                   $(".screen_2").css("display", "none")
                   $(".screen_3").css("display", "none")
                   $(".screen_4").css("display", "none")
-                  $(".screen_5").css("display", "none")
                 });
                 $("#home_1").click(function() {
                   $(".screen_1").css("display", "block")
                   $(".screen_2").css("display", "none")
                   $(".screen_3").css("display", "none")
                   $(".screen_4").css("display", "none")
-                  $(".screen_5").css("display", "none")
+                });
+                $("#home_2").click(function() {
+                  $(".screen_1").css("display", "block")
+                  $(".screen_2").css("display", "none")
+                  $(".screen_3").css("display", "none")
+                  $(".screen_4").css("display", "none")
                 });
                 $("#next_2").click(function() {
                   $(".screen_4").css("display", "block")
                   $(".screen_2").css("display", "none")
                   $(".screen_3").css("display", "none")
                   $(".screen_1").css("display", "none")
-                  $(".screen_5").css("display", "none")
                 });
                 $("#next_1").click(function() {
                   $(".screen_3").css("display", "block")
                   $(".screen_2").css("display", "none")
                   $(".screen_1").css("display", "none")
                   $(".screen_4").css("display", "none")
-                  $(".screen_5").css("display", "none")
                 });
               });
         </script>
   </head>
   <body>
+    <cursor></cursor>
     <div class="forrotate">
       <img src="images/rotate.svg" class="rotate">
     </div>
@@ -167,6 +170,6 @@
         <div class="puzzle18"></div>
         <div class="puzzle19"></div>
         <div class="puzzle20"></div>
-        <div id="home"></div>
+        <div id="home_2"></div>
     </section>
 </html>

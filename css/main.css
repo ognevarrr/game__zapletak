@@ -6,9 +6,12 @@
   --yellow:#FFF968;
   --background: #EEFFFF;
 }
+*{
+  cursor: url(../images/cursor_1.svg);
+}
 /* МИНИ-ИГРЫ */
 .screen_1 {
-
+  cursor: url(../images/cursor_1.svg);
   display: block;
 }
 
@@ -34,6 +37,7 @@
 html {
   width: 100vw;
   height: 100vh;
+  cursor: url(../images/cursor_1.svg);
 }
 body {
   overflow-x: hidden;
@@ -42,13 +46,16 @@ body {
   height:100vh;
   font-family: "Forma DJR";
   background-color: var(--background);
+  cursor: url(../images/cursor_1.svg);
 }
 section{
   position: absolute;
   width: 100vw;
   height:100vh;
 }
-
+cursor{
+  width: 16.806vw;
+}
 .tubes{
   position: absolute;
   width: 100vw;
@@ -62,7 +69,7 @@ section{
   margin-top: 8.7vw;
 }
 .itemz_orange{
-  cursor: move;
+  cursor: url(../images/cursor_1.svg), auto;
   position: absolute;
   width: 18.615vw;
   height: 57.192vw;
@@ -238,9 +245,10 @@ section{
 }
 #canvas{
   width: 100vw;
-  height: 56vw;
+  height: 60vw;
   display: block;
-  background: url('../images/y_background.png') no-repeat;
+  background: url('../images/y_background.png');
+  background-size: cover;
 }
 .drawBack {
   position: absolute;
@@ -317,7 +325,16 @@ h1{
   height: 11.25vw;
   right: 0vw;
   top: 3.542vw;
-  z-index: 2;
+  background-size: cover;
+}
+#home_2{
+  position: absolute;
+  background-image:  url("../images/home_1.svg");
+  width: 6vw;
+  height: 11.25vw;
+  right: 0vw;
+  top: 3.542vw;
+  background-size: cover;
 }
 #next_1{
   position: absolute;
