@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  // JQUERY UI DRAGGABLE
+  // Убираем преграды
   $(function(){
     $("#z_0").draggable();
     $("#z_b").draggable();
   });
 });
-
+// тыкаем в еду
 $(document).ready(function () {
     $("#lapka_1").click(function () {
         $(this).hide();
