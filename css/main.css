@@ -249,8 +249,8 @@ section{
 }
 
 #canvas{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 56vw;
   display: block;
   background: url('../images/y_background.png');
   background-size: cover;
@@ -468,18 +468,24 @@ h1{
   width: 14vw;
   height:14vw;
   position: absolute;
+  display: block;
+  background-size: cover;
 }
 
 .puzzle10 , .puzzle11, .puzzle12 , .puzzle13 , .puzzle14 , .puzzle15 , .puzzle16 , .puzzle17 {
   width: 14vw;
   height:14vw;
   position: absolute;
+  display: block;
+  background-size: cover;
 }
 
 .puzzle18 , .puzzle19 , .puzzle20 {
   width: 14vw;
   height:14vw;
   position: absolute;
+  display: block;
+  background-size: cover;
 }
 
 .puzzle1{
