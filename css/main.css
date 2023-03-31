@@ -234,25 +234,20 @@ section{
 }
 /* ИГРА 2 */
 .screen_2{
+  overflow: hidden;
+}
+#draw{
   width: 100vw;
   height: 56vw;
-}
-.y1_background{
-  position: absolute;
-}
-#draw {
-  overflow: hidden;
   display: block;
   background: url('../images/y_background.png') no-repeat;
-  background-size:contain;
-  height: 100vw;
-  width: 100vw;
-  opacity: 1;
-  transition: opacity 0.1s 0.2s;
+}
+.drawBack {
+  position: absolute;
 }
 h1{
   position: absolute;
-  font-family: 'Forma DJR Cyrillic Banner';
+  font-family: 'Forma DJR';
   font-style: normal;
   font-weight: 500;
   font-size: 4.861vw;
@@ -261,26 +256,26 @@ h1{
   margin-top: 4.728vw;
   margin-left: 21vw;
 }
-#c_blue, #c_black, #c_yellow, #c_orange{
+.colorButton{
   width: 4.333vw;
   height: 5vw;
   margin-left: 1.5vw;
   position: absolute;
   border-radius: 5vw;
 }
-#c_yellow{
+.c_yellow{
   background:  var(--yellow);
   top: 6vw;
 }
-#c_black{
+.c_black{
   background: var(--black);
   top: 12vw;
 }
-#c_blue{
+.c_blue{
   background: var(--blue);
   top: 18vw;
 }
-#c_orange{
+.c_orange{
   background: var(--orange);
   top: 24vw;
 }
