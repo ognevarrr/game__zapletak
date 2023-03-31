@@ -31,6 +31,7 @@ let
       x: 0,
       y: 0,
       size: 5,
+      color: var(--blue);
       down: false,
     },
     strokes = [],
@@ -70,10 +71,10 @@ let
     $('.c_yellow').click(function () {
       brush.color = "yellow";
     });
-    $('.cb02').click(function () {
-      brush.color = "black";
+    $('.c_orange').click(function () {
+      brush.color = "orange";
     });
-    $('.cb03').click(function () {
+    $('.c_black').click(function () {
       brush.color = "black";
     });
   }
