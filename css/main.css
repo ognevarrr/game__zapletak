@@ -13,19 +13,15 @@
 .screen_1 {
   display: block;
 }
-
 .screen_2 {
   display: none;
 }
-
 .screen_3 {
   display: none;
 }
-
 .screen_4 {
   display:none;
 }
-
 .screen_5 {
   display: none;
 }
@@ -60,17 +56,20 @@ section{
   width: 6.1vw;
   height: 7vw;
 }
+/* главаня */
 .tubes{
   position: absolute;
   width: 100vw;
   height: 56vw;
 }
+/* переход на пазл */
 .items_blue{
   position: absolute;
   width: 23.5vw;
   margin-left: 7vw;
   margin-top: 8.7vw;
 }
+/* переход на игру с едой */
 .itemz_orange{
   position: absolute;
   width: 18.615vw;
@@ -90,9 +89,6 @@ section{
   margin-left: 52.5vw;
   gap: 0vw;
 }
-/* .colors_dark:hover{
-  animation-play-state: paused;
-} */
 .color1_dark, .color2_dark, .color3_dark, .color4_dark{
   width: 5.635vw;
   height: 2.3vw;
@@ -126,13 +122,11 @@ section{
     background-color: var(--orange);
     border-color:  var(--yellow);}
 }
-
 .color3_dark{
   background-color: var(--yellow);
   border-color:  var(--black);
   animation: anim3 1s infinite 2s alternate;
 }
-
 @keyframes anim3 {
   0%{
     background-color: var(--yellow);
@@ -141,7 +135,6 @@ section{
     background-color: var(--yellow);
     border-color:  var(--orange);}
 }
-
 .color4_dark{
   background-color: var(--blue);
   border-color:  var(--black);
@@ -168,6 +161,7 @@ section{
   gap: 2vw;
   animation: darkanim 1.5s infinite alternate;
 }
+
 @keyframes darkanim {
   0%{
     gap: 2vw;}
@@ -175,6 +169,7 @@ section{
     gap: 0vw; transform: translateY(4vw);
   }
 }
+
 .item1_dark,.item2_dark, .item3_dark,.item4_dark{
   width: 5.740vw;
 }
@@ -204,6 +199,7 @@ section{
   100%{
     transform: translateY(10vw);}
 }
+
 .yellow_2{
   position: absolute;
   margin-top: 14.617vw;
@@ -212,18 +208,22 @@ section{
   transform: rotate(126.69deg);
   animation: mem3 1s infinite alternate;
 }
+
 @keyframes mem3 {
   0%{
     transform: rotate(146deg);}
   100%{
     transform: rotate(-0deg);}
 }
+
+/* переход на рисовашку */
 .colors{
   position: absolute;
   width: 25.34vw;
   margin-top: 44vw;
   margin-left: 62.3vw;
 }
+
 .yellow_rect{
   position: absolute;
   background-color: var(--orange);
@@ -234,6 +234,7 @@ section{
   border-radius: 3.33vw;
   animation: yellow 1s infinite alternate;
 }
+
 @keyframes yellow {
   0%{
     background-color: var(--orange);}
@@ -241,10 +242,12 @@ section{
     background-color: var(--yellow);
   }
 }
-/* ИГРА 2 */
+
+/* риисовашка */
 .screen_2{
   overflow: hidden;
 }
+
 #canvas{
   width: 100%;
   height: 100%;
@@ -252,6 +255,7 @@ section{
   background: url('../images/y_background.png');
   background-size: cover;
 }
+
 h1{
   position: absolute;
   font-family: 'Forma DJR';
@@ -263,6 +267,7 @@ h1{
   margin-top: 4.728vw;
   margin-left: 14vw;
 }
+
 .colorButton{
   width: 4.333vw;
   height: 5vw;
@@ -270,22 +275,27 @@ h1{
   position: absolute;
   border-radius: 5vw;
 }
+
 .c_yellow{
   background:  var(--yellow);
   top: 6vw;
 }
+
 .c_black{
   background: var(--black);
   top: 12vw;
 }
+
 .c_blue{
   background: var(--blue);
   top: 18vw;
 }
+
 .c_orange{
   background: var(--orange);
   top: 24vw;
 }
+
 .zapl1 {
   position: absolute;
   left: 0.972vw;
@@ -296,6 +306,7 @@ h1{
   background-size: cover;
   background-image: url("../images/zaple1.png");
 }
+
 .zapl2 {
   position: absolute;
   left: 0.972vw;
@@ -306,6 +317,7 @@ h1{
   background-size: cover;
   background-image: url("../images/zaple2.png");
 }
+
 .zapl3 {
   position: absolute;
   left: 0.972vw;
@@ -326,15 +338,7 @@ h1{
   top: 3.542vw;
   background-size: cover;
 }
-#home_2{
-  position: absolute;
-  background-image:  url("../images/home_1.svg");
-  width: 6vw;
-  height: 11.25vw;
-  right: 0vw;
-  top: 3.542vw;
-  background-size: cover;
-}
+
 #next_1{
   position: absolute;
   background-image:  url("../images/next_1.svg");
@@ -344,6 +348,7 @@ h1{
   right: 0vw;
   top: 33.792vw;
 }
+/* Игра с едой */
 .screen_3{
   overflow:hidden;
   background-color: var(--black);
@@ -450,6 +455,7 @@ h1{
   right: 0vw;
   top: 33.792vw;
 }
+/* Пазлик */
 .screen_4{
   overflow: hidden;
   background-image: url("../images/yback.svg");
@@ -462,13 +468,14 @@ h1{
   width: 14vw;
   height:14vw;
   position: absolute;
-  cursor: grab;
 }
+
 .puzzle10 , .puzzle11, .puzzle12 , .puzzle13 , .puzzle14 , .puzzle15 , .puzzle16 , .puzzle17 {
   width: 14vw;
   height:14vw;
   position: absolute;
 }
+
 .puzzle18 , .puzzle19 , .puzzle20 {
   width: 14vw;
   height:14vw;
@@ -603,6 +610,17 @@ h1{
   margin-top: 42vw;
   margin-left: 64vw;
 }
+
+#home_2{
+  position: absolute;
+  background-image:  url("../images/home_1.svg");
+  width: 6vw;
+  height: 11.25vw;
+  right: 0vw;
+  top: 3.542vw;
+  background-size: cover;
+}
+/* Перевёртыш */
 .rotate{
   background-image: url("../images/rotateb.svg");
   background-size: cover;

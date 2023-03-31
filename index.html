@@ -3,41 +3,38 @@
   <head>
     <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width"/>
-     <title>заплетак</title>
+     <title>вырасти свой заплетак</title>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
      <script src="js/find.js"></script>
      <script src="js/draw.js"></script>
-     <script src="js/draww.js" defer></script>
      <script src="js/puzzle.js"></script>
      <link rel="stylesheet" href="css/style.css">
      <link rel="icon" type="image/x-icon" href="images/favicon.png" />
      <script type="text/javascript">
-
               $(document).ready(function(){
-                // переходы из труб в разделы-игры
+                // переходы из главной в мини-игры
                 $(".items_blue").click(function() {
                   $(".screen_4").css("display", "block")
                   $(".screen_2").css("display", "none")
                   $(".screen_1").css("display", "none")
                   $(".screen_3").css("display", "none")
                 });
-
                 $(".items_orange").click(function() {
                   $(".screen_3").css("display", "block")
                   $(".screen_1").css("display", "none")
                   $(".screen_2").css("display", "none")
                   $(".screen_4").css("display", "none")
                 });
-
                 $(".colors").click(function() {
                   $(".screen_4").css("display", "none")
                   $(".screen_2").css("display", "block")
                   $(".screen_3").css("display", "none")
                   $(".screen_1").css("display", "none")
                 });
+                // переходы из игр на главную
                 $("#home").click(function() {
                   $(".screen_1").css("display", "block")
                   $(".screen_2").css("display", "none")
@@ -56,6 +53,7 @@
                   $(".screen_3").css("display", "none")
                   $(".screen_4").css("display", "none")
                 });
+                // переходы между играми
                 $("#next_2").click(function() {
                   $(".screen_4").css("display", "block")
                   $(".screen_2").css("display", "none")
@@ -72,42 +70,55 @@
         </script>
   </head>
   <body>
+    <!-- курсор -->
     <div class="cursor"></div>
+    <!-- экран-перевёртыш -->
     <div class="forrotate">
       <img src="images/rotate.svg" class="rotate">
     </div>
+    <!-- главная -->
     <section class="screen_1">
       <div class="tubes">
         <img src="images/tubes.svg" class="tubes">
+        <!-- переход на пазл -->
         <img src="images/items_blue.svg" class="items_blue">
+        <!-- переход на игру с едой -->
         <div class="items_orange">
           <img src="images/items_orange.svg" class="itemz_orange">
         </div>
+        <!-- анимация с блоками разных цветов -->
         <div class="colors_dark">
           <div class="color1_dark"></div>
           <div class="color2_dark"></div>
           <div class="color3_dark"></div>
           <div class="color4_dark"></div>
         </div>
+        <!-- анимация с заплетаками и спёйсингом -->
         <div class="items_dark">
           <img src="images/item1_dark.svg" class="item1_dark">
           <img src="images/item2_dark.svg" class="item2_dark">
           <img src="images/item3_dark.svg" class="item3_dark">
           <img src="images/item4_dark.svg" class="item4_dark">
         </div>
+        <!-- жёлтые заплетаки -->
         <div class="blue_final">
           <img src="images/yellow_2.svg" class="yellow_2">
           <img src="images/yellow_1.svg" class="yellow_1">
           <img src="images/yellow_3.svg" class="yellow_3">
         </div>
+        <!-- переход в игру рисовашку -->
         <div class="color__button">
           <img src="images/color__button.svg" class="colors">
         </div>
+        <!-- мигающий прямоугольник -->
         <div class="yellow_rect"></div>
       </div>
     </section>
+    <!-- игра рисовашка -->
     <section class="screen_2">
+      <!-- называем -->
       <h1 contentEditable="true">Заплетак 1</h1>
+      <!-- красим -->
       <canvas id="canvas"></canvas>
       <div class="colorButton c_blue"></div>
       <div class="colorButton c_black"></div>
@@ -129,12 +140,13 @@
       <div class="zapl3"></div>
       <div class="zapl3"></div>
       <!-- кнопка домой -->
-
       <div id="home"></div>
+      <!-- кнопка далее -->
       <div id="next_1"></div>
-
     </section>
+    <!-- игра с едой -->
     <section class="screen_3">
+      <!-- еда -->
       <div class="lapki">
         <div id="lapka_1"></div>
         <div id="lapka_2"></div>
@@ -145,12 +157,17 @@
         <div id="lapka_7"></div>
         <div id="lapka_8"></div>
       </div>
+      <!-- дебри -->
       <div id="z_0"></div>
       <div id="z_b"></div>
+      <!-- кнопка домой -->
       <div id="home_1"></div>
+      <!-- кнопка далее -->
       <div id="next_2"></div>
     </section>
+    <!-- игра-пазл -->
     <section class="screen_4">
+      <!-- пазлинки -->
       <div class="puzzle">
         <div class="puzzle1"></div>
         <div class="puzzle2"></div>
@@ -173,6 +190,7 @@
         <div class="puzzle19"></div>
         <div class="puzzle20"></div>
       </div>
+      <!-- кнопка домой -->
         <div id="home_2"></div>
     </section>
   </body>
