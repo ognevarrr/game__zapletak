@@ -236,7 +236,7 @@ section{
 .screen_2{
   overflow: hidden;
 }
-#draw{
+#canvas{
   width: 100vw;
   height: 56vw;
   display: block;
@@ -309,15 +309,7 @@ h1{
   background-size: cover;
   background-image: url("../images/zaple3.png");
 }
-#canvas {
-  position: absolute;
-  left:0vw;
-  top: 0vw;
-  width: 100vw;
-  z-index: 0;
-  height: 50vw;
-  /* background: #111; */
-}
+
 #home{
   position: absolute;
   background-image:  url("../images/home_1.svg");
